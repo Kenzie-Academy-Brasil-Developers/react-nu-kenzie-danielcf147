@@ -1,0 +1,255 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: white;
+  width: 100vw;
+  height: 10vh;
+  background: #f8f9fa;
+  box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+}
+.img {
+  margin-left: 25px;
+}
+.btn {
+  margin-right: 25px;
+  font-family: "Nunito";
+  font-style: normal;
+  width: 64px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  border: 1.4px solid #e9ecef;
+}
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+  margin-top: 30px;
+}
+.container-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 65vw;
+  height: 100vh;
+  background-color: white;
+}
+.container-left {
+  background-color: white;
+  height: 100vh;
+  width: 35vw;
+}
+.filterBtn {
+  background-color: #e9ecef;
+  justify-content: space-between;
+  width: 92px;
+  height: 40px;
+  border: 1.4px solid #e9ecef;
+  border-radius: 8px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+}
+.container-filterBtn {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.container-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  width: 50vw;
+}
+.container-card {
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+  background-color: #f8f9fa;
+  margin-top: 20px;
+}
+.outter-container-card {
+  width: 97%;
+}
+
+.color-type {
+  width: 4px;
+  height: 108px;
+  background: #03b898;
+  border-radius: 4px 0px 0px 4px;
+}
+.inner-container-card {
+  display: flex;
+  justify-content: space-between;
+}
+.container-trash {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+}
+.container-inner-value {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.trash {
+  height: 10px;
+  width: 9px;
+}
+.description {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #212529;
+}
+.type {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #343a40;
+}
+.value {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #212529;
+}
+.resumo-financeiro {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #212529;
+}
+
+.container-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35vw;
+  height: 100vh;
+}
+.container-left-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  width: 363px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+}
+.container-number-select {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.text-input {
+  width: 314px;
+  height: 45px;
+  background: #f8f9fa;
+  border: 2px solid #f8f9fa;
+  border-radius: 8px;
+}
+.p-description {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #212529;
+}
+.p-exemple {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #868e96;
+}
+.text-input-number {
+  width: 128px;
+  height: 45px;
+  background: #f8f9fa;
+  border: 2px solid #f8f9fa;
+  border-radius: 8px;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.submitBtn {
+  width: 314px;
+  height: 48px;
+  color: white;
+  background: #fd377e;
+  border: 2px solid #fd377e;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.total-valor {
+  width: 363px;
+  height: 96px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+.total-valor-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.p-total {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #212529;
+  margin-left: 10px;
+}
+.p-total-valor {
+  color: #fd377e;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  margin-right: 10px;
+}
+.p-referente-saldo {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #343a40;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
