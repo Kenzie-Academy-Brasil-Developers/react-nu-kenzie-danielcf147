@@ -1,5 +1,6 @@
+import { useState } from "react";
 import Card from "../Card/Card";
-const List = ({ listTransactions, filter }) => {
+const List = ({ listTransactions, filter, setListTransactions }) => {
   const filterEntrada = listTransactions.filter(
     (item) => item.type === "entrada"
   );
@@ -10,11 +11,30 @@ const List = ({ listTransactions, filter }) => {
     <div>
       {filter === "todos"
         ? listTransactions.map((item, index) => (
-            <Card item={item} key={index} />
+            <Card
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+              item={item}
+              key={index}
+            />
           ))
         : filter === "entrada" || filter === "Entrada"
-        ? filterEntrada.map((item, index) => <Card item={item} key={index} />)
-        : filterSaida.map((item, index) => <Card item={item} key={index} />)}
+        ? filterEntrada.map((item, index) => (
+            <Card
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+              item={item}
+              key={index}
+            />
+          ))
+        : filterSaida.map((item, index) => (
+            <Card
+              listTransactions={listTransactions}
+              setListTransactions={setListTransactions}
+              item={item}
+              key={index}
+            />
+          ))}
     </div>
   );
 };

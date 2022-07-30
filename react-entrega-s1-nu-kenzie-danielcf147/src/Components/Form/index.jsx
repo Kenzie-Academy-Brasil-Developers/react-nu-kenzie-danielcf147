@@ -2,17 +2,19 @@ import { useState } from "react";
 
 const Form = ({ setListTransactions }) => {
   const [description, setDescription] = useState("");
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState("");
   const [type, setType] = useState("entrada");
-  console.log(value);
+  const [id, setId] = useState(0);
+  // console.log(value);
   function transactionList() {
-    if (description !== "" && value !== "") {
+    if (description !== "" && value !== "" && value > 0 && value !== Number) {
       setListTransactions((oldListTransaction) => [
         ...oldListTransaction,
-        { description: description, type: type, value: value },
+        { description: description, type: type, value: value, id: id },
       ]);
     }
   }
+
   return (
     <div className="container-left-inner">
       <form
@@ -34,7 +36,7 @@ const Form = ({ setListTransactions }) => {
           <div>
             <input
               className="text-input-number"
-              type="text"
+              type="number"
               placeholder="1"
               value={value}
               onChange={(event) => {
@@ -53,7 +55,12 @@ const Form = ({ setListTransactions }) => {
             <option value={"saída"}>saida</option>
           </select>
         </div>
-        <button className="submitBtn" type="submit">
+        <button
+          className="submitBtn"
+          type="submit"
+          value={id}
+          onClick={(event) => setId(id + 1)}
+        >
           Inserir valor
         </button>
       </form>

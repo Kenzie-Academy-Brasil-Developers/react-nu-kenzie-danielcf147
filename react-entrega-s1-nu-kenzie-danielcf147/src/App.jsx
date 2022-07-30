@@ -7,12 +7,9 @@ import TotalMoney from "./Components/TotalMoney";
 import Filter from "./Components/Filter/Filter";
 
 function App() {
-  const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: -150 },
-  ]);
+  const [listTransactions, setListTransactions] = useState([]);
   const [filter, setFilter] = useState("todos");
-
+  console.log(listTransactions);
   return (
     <div className="container">
       <div className="header">
@@ -28,7 +25,11 @@ function App() {
         </div>
         <div className="container-right">
           <Filter filter={filter} setFilter={setFilter} />
-          <List listTransactions={listTransactions} filter={filter} />
+          <List
+            listTransactions={listTransactions}
+            setListTransactions={setListTransactions}
+            filter={filter}
+          />
         </div>
       </div>
     </div>

@@ -1,9 +1,16 @@
-const Card = ({ item }) => {
+const Card = ({ item, listTransactions, setListTransactions }) => {
   return (
     <div className="asd">
       <div className="container-card">
         <div>
-          <div className="color-type"></div>
+          <div
+            className="color-type"
+            style={
+              item.type === "entrada"
+                ? { background: "#03b898" }
+                : { background: "#E9ECEF" }
+            }
+          ></div>
         </div>
 
         <div className="outter-container-card">
@@ -11,7 +18,17 @@ const Card = ({ item }) => {
             <p className="description">{item.description}</p>
             <div className="container-trash">
               <p className="value">R$ {item.value}</p>
-              <img className="trash" src="./icons/trash.png" alt="" />
+              <button
+                onClick={() => {
+                  const filtered = listTransactions.filter(
+                    (value) => value.id !== item.id
+                  );
+                  console.log(filtered);
+                  setListTransactions(filtered);
+                }}
+              >
+                <img className="trash" src="./icons/trash.png" alt="" />
+              </button>
             </div>
           </div>
           <div className="container-inner-value">
